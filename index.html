@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>3-Layer Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>3-Layer Tic-Tac-Toe</h1>
+
+  <!-- 三层棋盘 -->
+  <div id="boards">
+    <!-- z = 0,1,2；用 data‑z 标记层 -->
+    <div class="board" data-z="0"></div>
+    <div class="board" data-z="1"></div>
+    <div class="board" data-z="2"></div>
+  </div>
+
+  <p id="status"></p>
+  <button id="restart">Restart</button>
+
+  <script src="main.js"></script>
+</body>
+</html>

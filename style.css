@@ -1,0 +1,46 @@
+body {
+    font-family: system-ui, sans-serif;
+    text-align: center;
+  }
+  
+  #boards{
+    display:flex;
+    flex-direction:column-reverse; /* 反向竖排：z=0 在最下，z=2 在最上 */
+    align-items:center;            /* 水平居中 */
+    gap:2rem;                      /* 层与层的间距 */
+  }
+  
+  /* 每一层 */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 4px;
+    perspective: 600px;          /* 让层次感更明显 */
+    transform: rotateX(10deg);
+  }
+  
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 3rem;
+    line-height: 80px;
+    cursor: pointer;
+    background: #fafafa;
+    border: 2px solid #333;
+    user-select: none;
+    transition: background 0.2s;
+  }
+  
+  .cell.blocked {
+    background: #999;
+    cursor: not-allowed;
+  }
+  
+  .cell:hover:not(.blocked):not(.X):not(.O) {
+    background: #e0f7fa;
+  }
+  
+  .X { color: #e91e63; }
+  .O { color: #3f51b5; }
+  

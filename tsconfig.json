@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "target": "ES2017",
+      "module": "none",
+      "strict": true,
+      "outFile": "main.js",      // 生成到根目录
+      "rootDir": "src"
+    },
+    "include": ["src/main.ts"]
+  }
+  
